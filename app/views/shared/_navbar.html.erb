@@ -15,6 +15,10 @@
       <% end %>
   </div>
 
+  <div class="btn bg-success">
+    <%= link_to "Chat with other users!", chatroom_path(Chatroom.last) %>
+  </div>
+
   <div class="call-to-action">
     <%= link_to "Ajoutez un dev", new_developer_path, id: "add" %>
 
@@ -22,6 +26,7 @@
       <div class="profile" data-controller="profile">
         <div style="width: 30px">
           <i class="fas fa-user" id="login" data-action="hover->profile#connect" data-profile-target="loginButton"></i>
+          <%= current_user.first_name %>
         </div>
         <div class="profile-menu" data-profile-target="profileMenu">
           <%= link_to 'Mon profil', user_profile_path(current_user) %>
