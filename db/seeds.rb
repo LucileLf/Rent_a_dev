@@ -44,7 +44,9 @@ puts "Cleaning database..."
 Developer.destroy_all
 User.destroy_all
 puts "Creating users..."
-User.create!(email: "toto@gmail.com", first_name: 'toto', last_name: 'titi', password: "123456", admin: true)
+toto = User.create!(email: "toto@gmail.com", first_name: 'toto', last_name: 'titi', password: "123456", admin: true)
+moi = User.create!(email: "lucile@gmail.com", first_name: 'lucile', last_name: 'lef', password: "123456", admin: true)
+
 puts "Creating developers..."
 
 student_divs.each do |student_div|
@@ -59,5 +61,8 @@ student_divs.each do |student_div|
     user: User.last
   )
 end
-
+puts "Developers created"
+puts "creating chatrooms"
+Chatroom.create!(name: "general")
+puts "chatroom created"
 puts 'Finished!'

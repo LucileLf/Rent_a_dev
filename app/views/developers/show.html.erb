@@ -11,7 +11,7 @@
     <div class="booking">
       <div class="developer-name">
           <%= @developer.first_name %> <%= @developer.last_name %> &nbsp;&nbsp;&nbsp;<span style="color: gold;"><i style="font-size: 35px;" class="fa-solid fa-star"></i> <%= @developer.reviews.average(:rating).to_f.round %></span>
-          <p>Cette annonce est proposée par <%= @developer.user.first_name %> <%= @developer.user.last_name %></p>
+          <p>Cette annonce est proposée par <%= @developer.user.first_name %> <%= @developer.user.last_name %>   </p>
       </div>
       <div class="developer-rate mt-5">
         <%= @developer.price_per_day %>€ par jour

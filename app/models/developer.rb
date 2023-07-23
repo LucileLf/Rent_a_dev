@@ -9,4 +9,11 @@ class Developer < ApplicationRecord
   validates :description, length: { minimum: 100, maximum: 1000 }
   geocoded_by :city
   after_validation :geocode, if: :will_save_change_to_city?
+
+  include PgSearch::Model
+  pg_search_scope :search_by_city_and_description,
+    against: [ :city, :description ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

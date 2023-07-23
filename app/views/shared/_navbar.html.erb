@@ -3,11 +3,16 @@
     <a href="/">Dev-A-Licious</a>
   </div>
 
-  <div class="search">
-    <%= form_with url: developers_path, method: :get do |form| %>
-      <%= form.text_field :query, placeholder: "Rechercher..." %>
-      <button type="submit"><i class="fas fa-search"></i></button>
-    <% end %>
+  <div class="search
+  ">
+      <%= form_with url: developers_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type a keyword"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-search" %>
+      <% end %>
   </div>
 
   <div class="call-to-action">

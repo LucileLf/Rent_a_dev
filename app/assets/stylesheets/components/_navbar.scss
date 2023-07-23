@@ -19,31 +19,29 @@
     input {
       width: 290px;
       border-radius: 25px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
       background-color: rgb(231, 231, 231);
       color: rgb(158, 158, 158);
       border: none;
       outline: none;
       padding: 10px;
     }
-
-    button {
-      width: 45px;
+    .btn-search{
+      width: 100px;
       height: 44px;
       padding: 10px;
-      margin-left: -5px;
+      margin-left: 20px;
       border: none;
       background-color: rgb(231, 231, 231);
       border-bottom-right-radius: 25px;
       border-top-right-radius: 25px;
       transition: all 0.4s ease;
-
       &:hover {
-        background-color: rgb(174, 174, 174);
+        background-color:$rouge;
       }
     }
-  }
+
+    }
+
 
   .call-to-action {
     display: flex;
