@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: DEV_A_LICIOUS_production
-  username: DEV_A_LICIOUS
-  password: <%= ENV["DEV_A_LICIOUS_DATABASE_PASSWORD"] %>
+  database: postgresql-symmetrical-72242
+  username: rent-a-dev
+  password: <%= ENV["RENT_A_DEV_DATABASE_PASSWORD"] %>

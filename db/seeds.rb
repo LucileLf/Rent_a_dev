@@ -44,7 +44,7 @@ puts "Cleaning database..."
 Developer.destroy_all
 User.destroy_all
 puts "Creating users..."
-User.create!(email: "toto@gmail.com", first_name: 'toto', last_name: 'titi', password: "123456", admin: true)
+User.create!(email: "admin@email.com", first_name: 'Prénom', last_name: 'NOM', password: "admin123", admin: true)
 puts "Creating developers..."
 
 student_divs.each do |student_div|
